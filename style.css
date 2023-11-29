@@ -1,0 +1,280 @@
+body {
+    font-family: "Open Sans", Arial;
+    background: #EEE;
+    text-align: center;
+  }
+  body * {
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @-webkit-keyframes bake-pie {
+    from {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes bake-pie {
+    from {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+
+  .wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 100px;
+
+  }
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .pie-chart {
+    font-family: "Open Sans", Arial;
+  }
+  .pie-chart--wrapper {
+    width: 400px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .pie-chart__pie, .pie-chart__legend {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .pie-chart__pie {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 10px auto 35px;
+  }
+  .pie-chart__pie::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    background: #EEE;
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+  }
+  .pie-chart__pie::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
+    margin: 220px auto;
+  }
+  
+  .slice {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    clip: rect(0px, 200px, 200px, 100px);
+    -webkit-animation: bake-pie 1s;
+            animation: bake-pie 1s;
+  }
+  .slice span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip: rect(0px, 200px, 200px, 100px);
+  }
+  
+  .pie-chart__legend {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 0.75em 0.75em 0.05em;
+    font-size: 13px;
+    box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
+    text-align: left;
+    width: 65%;
+  }
+  .pie-chart__legend li {
+    height: 1.25em;
+    margin-bottom: 0.7em;
+    padding-left: 0.5em;
+    border-left: 1.25em solid black;
+  }
+  .pie-chart__legend em {
+    font-style: normal;
+  }
+  .pie-chart__legend span {
+    float: right;
+  }
+  
+  .pie-charts {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background: white;
+    border-radius: 40px;
+    width: fit-content;
+  }
+  @media (max-width: 500px) {
+    .pie-charts {
+      flex-direction: column;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .bar-graph .year {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+  }
+  
+  .bar-graph-vertical {
+    height: 90%;
+    width: fit-content;
+    background: white;
+    padding-left: 25px;
+    border-radius: 40px;
+}
+  
+  .bar-graph-vertical .bar-container {
+    float: left;
+    height: 90%;
+    margin-right: 25px;
+    position: relative;
+    text-align: center;
+    width: 50px;
+  }
+  
+  .bar-graph-vertical .bar {
+    border-radius: 3px;
+    bottom: 40px;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .bar-graph-vertical .year {
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+  }
+  
+  .bar-graph-two .bar::after {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    color: #fff;
+    content: attr(data-percentage);
+    font-weight: 700;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 24px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  
+  .bar-graph-two .bar-one .bar {
+    background-color: #64b2d1;
+    -webkit-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+    -moz-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+    animation: show-bar-one-vertical 1.2s 0.1s forwards;
+  }
+  
+  .bar-graph-two .bar-two .bar {
+    background-color: #5292ac;
+    -webkit-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+    -moz-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+    animation: show-bar-two-vertical 1.2s 0.2s forwards;
+  }
+  
+  .bar-graph-two .bar-three .bar {
+    background-color: #407286;
+    -webkit-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+    -moz-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+    animation: show-bar-three-vertical 1.2s 0.3s forwards;
+  }
+  
+  .bar-graph-two .bar-four .bar {
+    background-color: #2e515f;
+    -webkit-animation: show-bar-four-vertical 1.2s 0.4s forwards;
+    -moz-animation: show-bar-four-vertical 1.2s 0.4s forwards;
+    animation: show-bar-four-vertical 1.2s 0.4s forwards;
+  }
+  
+  /* Bar Graph Vertical Animations */
+  @-webkit-keyframes show-bar-one-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 40%;
+    }
+  }
+  
+  @-webkit-keyframes show-bar-two-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 55%;
+    }
+  }
+  
+  @-webkit-keyframes show-bar-three-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 68%;
+    }
+  }
+  
+  @-webkit-keyframes show-bar-four-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 82%;
+    }
+  }
+  
+  @-webkit-keyframes fade-in-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
