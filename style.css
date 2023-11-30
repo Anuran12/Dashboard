@@ -21,6 +21,12 @@ body {
     }
   }
 
+  .title{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 80px;
+  }
+
   .wrapper{
     display: grid;
     grid-template-columns: auto auto;
@@ -145,7 +151,7 @@ body {
 
 
 
-
+  
 
   .bar-graph .year {
     -webkit-animation: fade-in-text 2.2s 0.1s forwards;
@@ -167,14 +173,14 @@ body {
     margin-right: 25px;
     position: relative;
     text-align: center;
-    width: 50px;
+    width: 80px;
   }
   
   .bar-graph-vertical .bar {
     border-radius: 3px;
     bottom: 40px;
     position: absolute;
-    width: 50px;
+    width: 80px;
   }
   
   .bar-graph-vertical .year {
@@ -194,6 +200,7 @@ body {
     font-weight: 700;
     left: 0;
     margin: 0 auto;
+    margin-top: 20px;
     position: absolute;
     right: 0;
     text-align: left;
@@ -276,5 +283,15 @@ body {
     }
     100% {
       opacity: 1;
+    }
+  }
+
+
+  @media (max-width: 1440px) {
+    .bar-graph-vertical .bar-container{
+      width: 40px;
+    }
+    .bar-graph-vertical .bar{
+      width: 40px;
     }
   }
