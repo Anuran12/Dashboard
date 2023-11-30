@@ -1,6 +1,6 @@
 body {
     font-family: "Open Sans", Arial;
-    background: #EEE;
+    background: #eff3f7;
     text-align: center;
   }
   body * {
@@ -134,6 +134,8 @@ body {
     background: white;
     border-radius: 40px;
     width: fit-content;
+        box-shadow: 0px 8px 13px -3px rgba(0, 0, 0, .07);
+
   }
   @media (max-width: 500px) {
     .pie-charts {
@@ -165,6 +167,7 @@ body {
     background: white;
     padding-left: 25px;
     border-radius: 40px;
+    box-shadow: 0px 8px 13px -3px rgba(0, 0, 0, .07);
 }
   
   .bar-graph-vertical .bar-container {
@@ -195,21 +198,15 @@ body {
     -webkit-animation: fade-in-text 2.2s 0.1s forwards;
     -moz-animation: fade-in-text 2.2s 0.1s forwards;
     animation: fade-in-text 2.2s 0.1s forwards;
-    color: #fff;
+    color: #ffffff;
     content: attr(data-percentage);
     font-weight: 700;
     left: 0;
-    margin: 0 auto;
-    margin-top: 20px;
     position: absolute;
     right: 0;
     text-align: left;
-    top: 24px;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    top: 2px;
+    text-align: center;
   }
   
   .bar-graph-two .bar-one .bar {
@@ -238,6 +235,43 @@ body {
     -webkit-animation: show-bar-four-vertical 1.2s 0.4s forwards;
     -moz-animation: show-bar-four-vertical 1.2s 0.4s forwards;
     animation: show-bar-four-vertical 1.2s 0.4s forwards;
+
+  }
+  .bar-graph-two .bar-five .bar {
+    background-color: #2e515f;
+    -webkit-animation: show-bar-five-vertical 1.2s 0.5s forwards;
+    -moz-animation: show-bar-five-vertical 1.2s 0.5s forwards;
+    animation: show-bar-five-vertical 1.2s 0.5s forwards;
+  }
+  .bar-graph-two .bar-six .bar {
+    background-color: #2e515f;
+    -webkit-animation: show-bar-six-vertical 1.2s 0.6s forwards;
+    -moz-animation: show-bar-six-vertical 1.2s 0.6s forwards;
+    animation: show-bar-six-vertical 1.2s 0.6s forwards;
+  }
+  .bar-graph-two .bar-seven .bar {
+    background-color: #2e515f;
+    -webkit-animation: show-bar-seven-vertical 1.2s 0.7s forwards;
+    -moz-animation: show-bar-seven-vertical 1.2s 0.7s forwards;
+    animation: show-bar-seven-vertical 1.2s 0.7s forwards;
+  }
+  .bar-graph-two .bar-eight .bar {
+    background-color: #2e515f;
+    -webkit-animation: show-bar-eight-vertical 1.2s 0.8s forwards;
+    -moz-animation: show-bar-eight-vertical 1.2s 0.8s forwards;
+    animation: show-bar-eight-vertical 1.2s 0.8s forwards;
+  }
+  .bar-graph-two .bar-nine .bar {
+    background-color: #2e515f;
+    -webkit-animation: show-bar-nine-vertical 1.2s 0.8s forwards;
+    -moz-animation: show-bar-nine-vertical 1.2s 0.8s forwards;
+    animation: show-bar-nine-vertical 1.2s 0.8s forwards;
+  }
+  .bar-graph-two .bar-ten .bar {
+    background-color: #2e515f;
+    -webkit-animation: show-bar-ten-vertical 1.2s 0.8s forwards;
+    -moz-animation: show-bar-ten-vertical 1.2s 0.8s forwards;
+    animation: show-bar-ten-vertical 1.2s 0.8s forwards;
   }
   
   /* Bar Graph Vertical Animations */
@@ -246,7 +280,7 @@ body {
       height: 0;
     }
     100% {
-      height: 40%;
+      height: 19%;
     }
   }
   
@@ -255,7 +289,7 @@ body {
       height: 0;
     }
     100% {
-      height: 55%;
+      height: 9%;
     }
   }
   
@@ -264,11 +298,59 @@ body {
       height: 0;
     }
     100% {
-      height: 68%;
+      height: 17.5%;
     }
   }
   
   @-webkit-keyframes show-bar-four-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 16%;
+    }
+  }
+  @-webkit-keyframes show-bar-five-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 17%;
+    }
+  }
+  @-webkit-keyframes show-bar-six-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4.8%;
+    }
+  }
+  @-webkit-keyframes show-bar-seven-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 8.5%;
+    }
+  }
+  @-webkit-keyframes show-bar-eight-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 15.2%;
+    }
+  }
+  @-webkit-keyframes show-bar-nine-vertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 32.4%;
+    }
+  }
+  @-webkit-keyframes show-bar-ten-vertical {
     0% {
       height: 0;
     }
@@ -287,11 +369,14 @@ body {
   }
 
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1550px) {
     .bar-graph-vertical .bar-container{
       width: 40px;
     }
     .bar-graph-vertical .bar{
       width: 40px;
+    }
+    .bar-graph-two .bar::after{
+      margin-top: 0;
     }
   }
